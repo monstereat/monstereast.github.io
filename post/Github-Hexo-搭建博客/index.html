@@ -1,342 +1,829 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
+<!doctype html>
+
+
+
   
-  <title> Github + Hexo 搭建博客  | Monstereat</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="# 安装Node.jswindows 32 位安装包下载地址 windows 64 位安装包下载地址 官网下载地址 各种系统以及版本都可以找到 # 安装GitGit 下载地址 安装 Git 后打开 git bash 界面 , 也就是 git 命令窗口 , 以下的所有命令操作全部在此窗口进行 , 别一会儿 cmd 一会儿 git。 # 注册GitHubgithub SSH Key 设置检查本机SSH">
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Moda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Tow:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Monstereat" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="安装Node.jswindows 32 位安装包下载地址 windows 64 位安装包下载地址 官网下载地址 各种系统以及版本都可以找到 安装GitGit 下载地址 安装 Git 后打开 git bash 界面 , 也就是 git 命令窗口 , 以下的所有命令操作全部在此窗口进行 , 别一会儿 cmd 一会儿 git。 注册GitHubgithub SSH Key 设置检查本机SSH Key​">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content=" Github + Hexo 搭建博客 ">
 <meta property="og:url" content="http://wsgzao.github.io/post/Github-Hexo-搭建博客/index.html">
 <meta property="og:site_name" content="Monstereat">
-<meta property="og:description" content="# 安装Node.jswindows 32 位安装包下载地址 windows 64 位安装包下载地址 官网下载地址 各种系统以及版本都可以找到 # 安装GitGit 下载地址 安装 Git 后打开 git bash 界面 , 也就是 git 命令窗口 , 以下的所有命令操作全部在此窗口进行 , 别一会儿 cmd 一会儿 git。 # 注册GitHubgithub SSH Key 设置检查本机SSH">
-<meta property="og:updated_time" content="2017-04-16T01:40:44.710Z">
+<meta property="og:description" content="安装Node.jswindows 32 位安装包下载地址 windows 64 位安装包下载地址 官网下载地址 各种系统以及版本都可以找到 安装GitGit 下载地址 安装 Git 后打开 git bash 界面 , 也就是 git 命令窗口 , 以下的所有命令操作全部在此窗口进行 , 别一会儿 cmd 一会儿 git。 注册GitHubgithub SSH Key 设置检查本机SSH Key​">
+<meta property="og:updated_time" content="2017-04-16T04:16:55.975Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content=" Github + Hexo 搭建博客 ">
-<meta name="twitter:description" content="# 安装Node.jswindows 32 位安装包下载地址 windows 64 位安装包下载地址 官网下载地址 各种系统以及版本都可以找到 # 安装GitGit 下载地址 安装 Git 后打开 git bash 界面 , 也就是 git 命令窗口 , 以下的所有命令操作全部在此窗口进行 , 别一会儿 cmd 一会儿 git。 # 注册GitHubgithub SSH Key 设置检查本机SSH">
-  
-    <link rel="alternate" href="/atom.xml" title="Monstereat" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
+<meta name="twitter:description" content="安装Node.jswindows 32 位安装包下载地址 windows 64 位安装包下载地址 官网下载地址 各种系统以及版本都可以找到 安装GitGit 下载地址 安装 Git 后打开 git bash 界面 , 也就是 git 命令窗口 , 以下的所有命令操作全部在此窗口进行 , 别一会儿 cmd 一会儿 git。 注册GitHubgithub SSH Key 设置检查本机SSH Key​">
 
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://wsgzao.github.io/post/Github-Hexo-搭建博客/"/>
+
+
+
+
+
+  <title>  Github + Hexo 搭建博客  | Monstereat </title>
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Monstereat</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://wsgzao.github.io"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-Github-Hexo-搭建博客" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/post/Github-Hexo-搭建博客/" class="article-date">
-  <time datetime="2017-04-15T10:54:33.000Z" itemprop="datePublished">2017-04-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-       Github + Hexo 搭建博客 
-    </h1>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
   
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Monstereat</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://wsgzao.github.io/post/Github-Hexo-搭建博客/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Monstereat">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Monstereat">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                 Github + Hexo 搭建博客 
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-15T18:54:33+08:00">
+                2017-04-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/post/Github-Hexo-搭建博客/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="post/Github-Hexo-搭建博客/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="# 安装Node.js"></a># 安装Node.js</h2><p>windows 32 位安装包下载地址</p>
-<p>windows 64 位安装包下载地址</p>
-<p>官网下载地址 各种系统以及版本都可以找到</p>
-<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="# 安装Git"></a># 安装Git</h2><p><a href="https://git-scm.com/download/" target="_blank" rel="external">Git 下载地址</a></p>
+      
+
+      
+        <h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p><a href="https://smartbeng.github.io/2017/03/26/blogFinish/" target="_blank" rel="external">windows 32 位安装包下载地址</a></p>
+<p><a href="https://smartbeng.github.io/2017/03/26/blogFinish/" target="_blank" rel="external">windows 64 位安装包下载地址</a></p>
+<p><a href="https://nodejs.org/en/download/" target="_blank" rel="external">官网下载地址 各种系统以及版本都可以找到</a></p>
+<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p><a href="https://git-scm.com/download/" target="_blank" rel="external">Git 下载地址</a></p>
 <p>安装 Git 后打开 git bash 界面 , 也就是 git 命令窗口 , 以下的所有命令操作全部在此窗口进行 , 别一会儿 cmd 一会儿 git。</p>
-<h2 id="注册GitHub"><a href="#注册GitHub" class="headerlink" title="# 注册GitHub"></a># 注册GitHub</h2><p><a href="http://www.github.com" target="_blank" rel="external">github</a></p>
-<h1 id="SSH-Key-设置"><a href="#SSH-Key-设置" class="headerlink" title="SSH Key 设置"></a>SSH Key 设置</h1><h2 id="检查本机SSH-Key-设置"><a href="#检查本机SSH-Key-设置" class="headerlink" title="检查本机SSH Key 设置"></a>检查本机SSH Key 设置</h2><p>首先我们需要检查你本机的ssh key 秘钥，在你安装git的目录下，右击Git Bash Here</p>
-<p><code>$ cd ~/. ssh</code></p>
-<p>如果提示：No such file or directory 说明你是第一次使用git。</p>
-<p>生成新的 SSH key</p>
-<p><code>$ ssh-keygen -t rsa -C &quot;邮箱&quot;</code><br><code>Generating public/private rsa key pair.</code><br><code>Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa):&lt;回车&gt;</code><br>然后系统要你输入密码：</p>
-<p>注意：输入密码时不显示*号 , 直接输入回车。</p>
-<p><code>Enter passphrase (empty for no passphrase):&lt;输入加密串&gt;</code><br><code>Enter same passphrase again:&lt;再次输入加密串&gt;</code><br>这个密码会在你提交项目时使用 , 如果为空提交项目时不用输入。</p>
-<p>如果没有异常信息出现 , ssh key 就设置成功了，如果出现错误信息，请仔细阅读错误信息，看自己能否解决，也可以借助Google，百度，查找错误原因。</p>
-<h2 id="添加SHH-Key-到-Github"><a href="#添加SHH-Key-到-Github" class="headerlink" title="添加SHH Key 到 Github"></a>添加SHH Key 到 Github</h2><p>打开本地C:\Users\LENOVO.ssh\id_rsa.pub文件(Git安装目录上一级目录.shh文件里面)。文件里面内容为刚才生成的密钥。如果看不到这个文件，你需要设置显示隐藏文件。右击记事本打开，准确的复制这个文件的内容，才能设置的成功。<br>登陆github系统。<br>点击右上角头像处的下拉列表 Settings—&gt;SSH and GPG keys —&gt; 右上角 New SSH key<br>把你本地生成的密钥复制到里面（key文本框中）， 点击 add key 就ok了</p>
-<h2 id="测试设置"><a href="#测试设置" class="headerlink" title="测试设置"></a>测试设置</h2><p>可以输入下面的命令 , 看看设置是否成功，git@github.com的部分不要修改：</p>
-<p>$ ssh -T git@github.com<br>如果是下面的反馈：</p>
+<h2 id="注册GitHub"><a href="#注册GitHub" class="headerlink" title="注册GitHub"></a>注册GitHub</h2><p><a href="http://www.github.com" target="_blank" rel="external">github</a></p>
+<h2 id="SSH-Key-设置"><a href="#SSH-Key-设置" class="headerlink" title="SSH Key 设置"></a>SSH Key 设置</h2><h3 id="检查本机SSH-Key"><a href="#检查本机SSH-Key" class="headerlink" title="检查本机SSH Key"></a>检查本机SSH Key</h3><p>​    首先我们需要检查你本机的ssh key 秘钥，在你安装git的目录下，右击Git Bash Here</p>
+<p>​    <code>$ cd ~/. ssh</code></p>
+<p>​    如果提示：No such file or directory 说明你是第一次使用git。</p>
+<p>​    生成新的 SSH key</p>
+<p>​    <code>$ ssh-keygen -t rsa -C &quot;邮箱&quot;</code></p>
+<p>​    `Generating public/private rsa key pair.``</p>
+<p>​    ·<code>Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa):&lt;回车&gt;</code></p>
+<p>​    然后系统要你输入密码：</p>
+<p>​    注意：输入密码时不显示*号 , 直接输入回车。</p>
+<p>​    <code>Enter passphrase (empty for no passphrase):&lt;输入加密串&gt;</code></p>
+<p>​    <code>Enter same passphrase again:&lt;再次输入加密串&gt;</code></p>
+<p>​    这个密码会在你提交项目时使用 , 如果为空提交项目时不用输入。</p>
+<p>​    如果没有异常信息出现 , ssh key 就设置成功了，如果出现错误信息，请仔细阅读错误信息，看自己能否解                决，也可以借助Google，百度，查找错误原因。</p>
+<h3 id="添加-SSH-Key-到-GitHub"><a href="#添加-SSH-Key-到-GitHub" class="headerlink" title="添加 SSH Key 到 GitHub"></a>添加 SSH Key 到 GitHub</h3><p>​    打开本地C:\Users\LENOVO.ssh\id_rsa.pub文件(Git安装目录上一级目录.shh文件里面)。文件里面内容为刚        才生成的密钥。如果看不到这个文件，你需要设置显示隐藏文件。右击记事本打开，准确的复制这个文件的内容，才能设置的成功。<br>​    登陆github系统。<br>​    点击右上角头像处的下拉列表 Settings—&gt;SSH and GPG keys —&gt; 右上角 New SSH key<br>​    把你本地生成的密钥复制到里面（key文本框中）， 点击 add key 就ok了</p>
+<h3 id="测试设置"><a href="#测试设置" class="headerlink" title="测试设置"></a>测试设置</h3><p>​    可以输入下面的命令 , 看看设置是否成功，git@github.com的部分不要修改：</p>
+<p>​    $ ssh -T git@github.com</p>
+<p>​    如果是下面的反馈：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<p>The authenticity of host ‘github.com (207.97.227.239)’ can’t be established.<br>RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.<br>Are you sure you want to continue connecting (yes/no)?</p>
+<p>​    The authenticity of host ‘github.com (207.97.227.239)’ can’t be established.<br>​    RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.<br>​    Are you sure you want to continue connecting (yes/no)?</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<p>不要紧张 , 输入yes就好 , 然后会看到：</p>
-<p><code>Hi cnfeat! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code></p>
-<h2 id="设置用户信息"><a href="#设置用户信息" class="headerlink" title="设置用户信息"></a>设置用户信息</h2><p>现在你已经可以通过SSH链接到GitHub了 , 还有一些个人信息需要完善的。</p>
-<p>Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理 , 输入下面的代码进行个人信息的设置 ,名字是你的别名(能标识你的身份的，比如：dalao) , 而不是GitHub的昵称。</p>
-<p><code>$ git config --global user.name &quot;名字&quot;//你的用户名</code><br><code>$ git config --global user.email  &quot;邮箱&quot;//填写自己的邮箱</code><br>– 查看用户名密码去掉后面的双引内容<br>SSH 配置成功</p>
-<p>本机已成功连接到github</p>
-<p>如有问题 , 请重新设置 , 常见错误参考</p>
-<p><a href="http://help.github.com/articles/generating-ssh-keys" target="_blank" rel="external">http://help.github.com/articles/generating-ssh-keys</a></p>
-<p><a href="http://help.github.com/articles/error-permission-denied-publickey" target="_blank" rel="external">http://help.github.com/articles/error-permission-denied-publickey</a></p>
-<p>​</p>
-<h1 id="使用GitHub-建立博客"><a href="#使用GitHub-建立博客" class="headerlink" title="使用GitHub 建立博客"></a>使用GitHub 建立博客</h1><h2 id="创建GitHub存放博客仓库"><a href="#创建GitHub存放博客仓库" class="headerlink" title="创建GitHub存放博客仓库"></a>创建GitHub存放博客仓库</h2><p>登录后系统，在github首页，点击页面右下角「New Repository」</p>
-<p>填写项目信息：</p>
-<p>Repository name：userName.github.io –注意：userName为github用户名</p>
-<p>Description (optional)： Writing 1000 Words a Day Changed My Life –描述</p>
-<p>注：Github Pages的Repository名字是特定（两个要一致）的，比如我Github账号是cnfeat，那么我Github Pages Repository（GitHub仓库）名字就是cnfeat.github.io。</p>
-<p>每个帐号只能有一个仓库来存放个人主页，而且仓库的名字必须是username.github.io，这是特殊的命名约定。完了你可以通过<a href="http://username.github.io" target="_blank" rel="external">http://username.github.io</a> 来访问你的个人主页。</p>
-<p>点击「Create Repository」 完成创建。</p>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>Hexo的作者是tommy351，根据官方介绍，Hexo是一个简单、快速、强大的博客发布工具，支持Markdown格式。</p>
-<p>在「我的电脑」中任意选择一个盘新建「Hexo」文件夹 , 比如我在 E 盘建的 , 打开 git 窗口输入以下命令</p>
-<p>打开 git , 运行Hexo 安装命令<br><code>$ npm install -g hexo</code></p>
-<p>进入到 Hexo 目录下e<br><code>$ cd E:/Hexo</code></p>
-<p>运行如下命令 , Hexo随后会自动在目标文件夹建立网站所需要的所有文件。</p>
-<p><code>$ hexo init</code></p>
-<p>现在已经搭建起来一个本地博客了 , 输入以下命令验证</p>
-<p><code>$ hexo g -生成</code></p>
-<p>$ hexo s -启动服务本地预览 （预览完要停止键盘按下 Ctrl + C 停止本地预览）</p>
-<p>然后到浏览器输入localhost:4000看看 , 一个初始博客映入眼帘</p>
-<p>更换博客主题</p>
-<p>注意：以下每更换一次主题 运行 hexo g 之前运行如下命令</p>
-<p><code>$ hexo clean</code>–因为主题换了 你需要clean以下老主题生成的缓存</p>
-<p>运行了此命令之后再 hexo g（生成） 和 hexo s（启动本地服务） 进行预览</p>
-<p>复制主题</p>
-<p>这里推荐一个靠谱主题 , 先搭起来 , 发现好的再另行设置</p>
-<p>1<br>$ git clone <a href="https://github.com/wuchong/jacman.git" target="_blank" rel="external">https://github.com/wuchong/jacman.git</a> themes/jacman<br>配置复制的主题</p>
-<p>修改Hexo目录下的config.yml配置文件中的theme属性，将其设置为jacman</p>
-<p>启用主题</p>
-<p>从Hexo的根目录进入你复制的主题目录</p>
-<p><code>$ cd themes/jacman</code><br><code>$ git pull</code><br><code>$ hexo g   --生成</code><br><code>$ hexo s   --启动本地预览</code><br>​ 1.操作完之后浏览器输入 localhost:4000 看一下有没有</p>
-<p>​ 2.这里我说一点 , 调主题样式后面再调 , 先把博客搭建起来 , 别瞎搞</p>
-<p>​ 3.切记如果没有 hexo clean 一下 , 再去 hexo g 和 hexo s</p>
-<p>​ 4.注意：为避免出错，请先备份你的_config.yml 文件后再升级</p>
-<p>这里有必要提下Hexo常用的几个命令：</p>
-<p>hexo generate (hexo g) 生成静态文件，会在当前目录下生成一个新的叫做public的文件夹<br>hexo server (hexo s) 启动本地web服务，用于博客的预览<br>hexo deploy (hexo d) 部署播客到远端（比如github, heroku等平台）<br>另外还有其他几个常用命令：</p>
-<p><code>$ hexo new &quot;postName&quot; #新建文章</code><br><code>$ hexo new page &quot;pageName&quot; #新建页面</code><br>postName 是你自己起的文章名字 , 内容就在这里面写</p>
-<p>注意：重点来了</p>
-<p>生成的文章会存在于 Hexo\source_posts 目录下<br>文章默认是一个.md的格式 , 意思它用的是 Markdown 语法 , 不知道的百度 , 关于语法的问题不知道的完了学 , , 先下载一个 Markdown编辑器<br>Markdown 编辑器我喜欢用 Typora , 自行搜索下载<br>如果不知道Markdown 的 语法写作 , 先随便在上面写点东西为了测试<br>写完之后 Ctrl + S 保存</p>
-<p>那怎么在本地预览自己写的博客或者增加后的博客呢</p>
-<p>首先在命令窗口切换回 Hexo 目录下 , 而不是你复制的主题目录下</p>
-<p>$ cd Hexo</p>
-<p>然后再 hexo g（生成网页） 接着hexo s（启动本地服务） , 浏览器查看效果（ localhost:4000 ）</p>
-<p>常用简写</p>
-<p><code>$ hexo n == hexo new        --新建文章</code><br><code>$ hexo g == hexo generate   --生成页面</code><br><code>$ hexo s == hexo server     --启用本地浏览器预览（localhost:4000）</code><br><code>$ hexo d == hexo deploy     --部署博客</code><br>常用组合</p>
-<p><code>$ hexo d -g #生成部署</code><br><code>$ hexo s -g #生成预览</code><br>重头戏 , 将你复制的主题以及所写文章成功关联到 GitHub 链接 , 就可以通过 username.github.io 访问啦</p>
-<p>​ 在这里教大家一个快捷方式 , 一键部署博客到 GitHub</p>
-<p>进入 Hexo 的根目录 接着操作以下命令</p>
-<p>$ cd Hexo</p>
-<p>注意 1：现在我们需要clone我们自己的GitHub仓库了</p>
-<p>注意 3：切记下面是你自己的仓库名 , 把名字都改过来 , 下面我用的是我的仓库名字</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<p>$ git clone <a href="https://github.com/storm/" target="_blank" rel="external">https://github.com/storm/</a></p>
-<p>strom.github.io.git .deploy/storm.github.io</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<p>翻译下这条命令的意思</p>
-<p>将我们之前创建的GitHub 仓库克隆到本地 , 命令会新建一个目录叫做.deploy用于存放克隆的代码。</p>
-<p>然后会在.deploy文件夹下生成一个 你的名字.github.io 的文件夹用于存放文件</p>
-<p>2.接着在 Hexo 根目录下创建一个 .txt 文件 , 把下面的命令复制进去</p>
-<p>3.注意 ：你的GitHub名字是什么就把你的名字全部改到下面 , 细心点</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<p>hexo generate<br>cp -R public/* .deploy/jacman.github.io<br>cd .deploy/jacman.github.io<br>git add .<br>git commit -m “update”<br>git push origin master</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<p>4.将这个 .txt 文件的后缀改成 .sh , 它就变成了脚本文件 , 我们就将文件改成 deploy.sh 吧！意思就是部署</p>
-<p>5.从此以后需要部署本地博客到 GitHub , 直接可以双击这个文件 , 他会弹出提示 , 需要输入 GitHub 的用户名跟密码 , 是不是很高大上</p>
-<p>见证奇迹的时刻</p>
-<p>你的主题改完还没有推送到GitHub , 所以你需要在 git 命令窗口先进入主题目录 Hexo/themes/jacman , 运行如下命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<p>$ cd themes/jacman<br>$ git pull<br>$ hexo g  –生成本地（主题）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<p>切记这里不要用 hexo d 命令 , 好了 , 往下看</p>
-<p>现在切回到Hexo的根目录下 , 我的在 D 盘 , 我就输入以下命<br>$ cd D:/Hexo</p>
-<p>如果你想改博客内容 , 随时都可以 , 进入 D:\Hexo\source_posts 目录下 , 右键你所创建的文件用Markdown编辑器打开 , 编辑完 Ctrl + S 保存关掉窗口就行了 , 紧接着往下走就OK</p>
-<p>接着输入下面的生成命令</p>
-<p>$ hexo g</p>
-<p>最后一步 , 发布成功（发布之后访问会有延迟 , 别急）</p>
-<p>双击我们刚在Hexo 目录下编辑的 deploy.sh 脚本文件 , 然后默默的输入 GitHub 用户名和密码 , 完了之后就去访问你的个人博客网页吧！就是你的 GitHub 仓库名 <a href="https://username.github.io" target="_blank" rel="external">https://username.github.io</a> (username 是你的用户名呀哥 , 别搞错)</p>
-<p>也就是说：以后你发布博客只需要两步 , Hexo 根目录下 运行 hexo g , 之后点击 depploy.sh 脚本！</p>
-<p>以后如果你第二次修改了新的主题 , 在修改完 Hexo 下的 _config.yml 之后请进行以下操作</p>
-<p>$ cd Hexo/themes/jacman – 当然是先进入主题的目录了</p>
-<p>$ hexo clean –然后clean一下老主题</p>
-<p>$ git pull</p>
-<p>$ hexo g – 生成</p>
-<p>此时再进入 Hexo 的根目录下</p>
-<p>$ hexo g</p>
-<p>然后直接双击 Hexo 下的 deploy.sh 脚本吧！等着输入用户名密码就OK</p>
-<p>请注意这里有个大坑</p>
-<p>_confing.yml 下 timezone 配置不能错</p>
-<p>timezone: zh-CN #能配置成 +08:00 类似的</p>
-<p>上面那个也有不对的，如果设置cheng +08:00 后 momentjs解析会报异常</p>
-<p>需要将timezone配置成 时区名称</p>
-<p>timezone: Asia/Shanghai</p>
-<p>关于域名的绑定看我解释 , 不需要域名的 , 比如我的用户名是stormzha , 就可以通过 <a href="https://stormzha.github.io" target="_blank" rel="external">https://stormzha.github.io</a> 来访问我的博客了。绑定自己的域名买域名都是后话了 , 等你富裕了可以完全买一个绑定在这里 , 比如我去买一个 www.storm.com , 完了绑定在GitHub , 以后就可以访问这个链接来到我的博客了 , 绑定很简单 , 自行网上搜索。为了不对新手造成误导 , 就把这个省略了 , 因为有人问我是不是一定要绑定域名 , 可见某些教程误导了新上手的同学。</p>
-<p>基于Hexo 的帅张博客主题地址 <a href="https://github.com/smartbeng/hexo-scribble" target="_blank" rel="external">https://github.com/smartbeng/hexo-scribble</a></p>
-<p>欢迎 Fork , 欢迎 Pull requests , 感觉这个教程有帮助的起码别忘了给我的 GitHub Star 哈 , 感谢！</p>
-<p>祝愿大家在这条路上越走越远 , 不断突破自己 , 让自己变得更加出众！</p>
-<p>​</p>
-<p>最后说两句 , 关于本主题的配置百度一搜就有 , 比如我们用的jacman的主题 , 你就搜jacman 的主题配置, 关于样式的调整 , 如果你是一个追求完美的人 , 那你就要在这上面用点心思了 , 比如说调 CSS 样式什么的 , 哈哈你懂得！如果感觉本教程不错欢迎大伙儿推荐给没搭建的朋友们来踩 , 感谢！</p>
+<p>​    不要紧张 , 输入yes就好 , 然后会看到：</p>
+<p>​    <code>Hi cnfeat! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code></p>
+<h3 id="设置用户名信息"><a href="#设置用户名信息" class="headerlink" title="设置用户名信息"></a>设置用户名信息</h3><p>​    现在你已经可以通过SSH链接到GitHub了 , 还有一些个人信息需要完善的。</p>
+<p>​    Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理 , 输入下面的代码进行个人        信息的设置 ,名字是你的别名(能标识你的身份的，比如：dalao) , 而不是GitHub的昵称。</p>
+<p>​    <code>$ git config --global user.name &quot;名字&quot;//你的用户名</code><br>​    <code>$ git config --global user.email  &quot;邮箱&quot;//填写自己的邮箱</code><br>​    – 查看用户名密码去掉后面的双引内容<br>​    SSH 配置成功</p>
+<p>​    本机已成功连接到github</p>
+<p>​    如有问题 , 请重新设置 , 常见错误参考</p>
+<p>​    <a href="http://help.github.com/articles/generating-ssh-keys" target="_blank" rel="external">http://help.github.com/articles/generating-ssh-keys</a></p>
+<p>​    <a href="http://help.github.com/articles/error-permission-denied-publickey" target="_blank" rel="external">http://help.github.com/articles/error-permission-denied-publickey</a></p>
+<h2 id="使用-Hexo-创建博客"><a href="#使用-Hexo-创建博客" class="headerlink" title="使用 Hexo 创建博客"></a>使用 Hexo 创建博客</h2><h3 id="创建存放博客的-Github-仓库"><a href="#创建存放博客的-Github-仓库" class="headerlink" title="创建存放博客的 Github 仓库"></a>创建存放博客的 Github 仓库</h3><p>​    登录后系统，在github首页，点击页面右下角「New Repository」</p>
+<p>​    填写项目信息：</p>
+<p>​    Repository name：userName.github.io –注意：userName为github用户名</p>
+<p>​    Description (optional)： Writing 1000 Words a Day Changed My Life –描述</p>
+<p>​    注：Github Pages的Repository名字是特定（两个要一致）的，比如我Github账号是cnfeat，那么我Github         Pages Repository（GitHub仓库）名字就是cnfeat.github.io。</p>
+<p>​    每个帐号只能有一个仓库来存放个人主页，而且仓库的名字必须是username.github.io，这是特殊的命名约    定。完了你可以通过<a href="http://username.github.io" target="_blank" rel="external">http://username.github.io</a> 来访问你的个人主页。</p>
+<p>​    点击「Create Repository」 完成创建。</p>
+<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>​    Hexo的作者是tommy351，根据官方介绍，Hexo是一个简单、快速、强大的博客发布工具，支持Markdown格式。</p>
+<p>​    在「我的电脑」中任意选择一个盘新建「Hexo」文件夹 , 比如我在 E 盘建的 , 打开 git 窗口输入以下命令</p>
+<p>​    打开 git , 运行Hexo 安装命令</p>
+<p>​    <code>$ npm install -g hexo</code></p>
+<p>​    进入到 Hexo 目录下e</p>
+<p>​    <code>$ cd E:/Hexo</code></p>
+<p>​    运行如下命令 , Hexo随后会自动在目标文件夹建立网站所需要的所有文件</p>
+<p>​    <code>$ hexo init</code></p>
+<p>​    现在已经搭建起来一个本地博客了 , 输入以下命令验证</p>
+<p>​    <code>$ hexo g -生成</code></p>
+<p>​    $ hexo s -启动服务本地预览 （预览完要停止键盘按下 Ctrl + C 停止本地预览）</p>
+<p>​    然后到浏览器输入localhost:4000看看 , 一个初始博客映入眼帘</p>
+<p>​    这里有必要提下Hexo常用的几个命令：</p>
+<p>​    hexo generate (hexo g) 生成静态文件，会在当前目录下生成一个新的叫做public的文件夹</p>
+<p>​    hexo server (hexo s) 启动本地web服务，用于博客的预览<br>​    hexo deploy (hexo d) 部署播客到远端（比如github, heroku等平台）<br>​    另外还有其他几个常用命令：</p>
+<p>​    <code>$ hexo new &quot;postName&quot; #新建文章</code></p>
+<p>​    <code>$ hexo new page &quot;pageName&quot; #新建页面</code><br>​    postName 是你自己起的文章名字 , 内容就在这里面写</p>
+<h3 id="Markdown学习"><a href="#Markdown学习" class="headerlink" title="Markdown学习"></a>Markdown学习</h3><p>​    生成的文章会存在于 Hexo\source_posts 目录下</p>
+<p>​    文章默认是.md的格式 , 它用的是 Markdown 语法 , <a href="http://www.jianshu.com/p/q81RER" target="_blank" rel="external">Markdown语法学习</a>几分钟就学完 , 学完后下载一个        Markdown编辑器。推荐<a href="https://typora.io/" target="_blank" rel="external">Typora</a></p>
+<p>​    写完之后 Ctrl + S 保存</p>
+<p>​    本地预览自己写的博客或者增加后的博客</p>
+<p>​    首先在命令窗口切换回 Hexo 目录下 , 而不是你复制的主题目录下</p>
+<p>​    $ cd Hexo</p>
+<p>​    然后再 hexo g（生成网页） 接着hexo s（启动本地服务） , 浏览器查看效果（ localhost:4000 ）</p>
+<p>​    常用简写</p>
+<p>​    <code>$ hexo n == hexo new        --新建文章</code><br>​    <code>$ hexo g == hexo generate   --生成页面</code><br>​    <code>$ hexo s == hexo server     --启用本地浏览器预览（localhost:4000）</code><br>​    <code>$ hexo d == hexo deploy     --部署博客</code><br>​    常用组合</p>
+<p>​    <code>$ hexo d -g #生成部署</code><br>​    <code>$ hexo s -g #生成预览</code></p>
+<h1 id="本地博客与github关联"><a href="#本地博客与github关联" class="headerlink" title="本地博客与github关联"></a>本地博客与github关联</h1><p>​    重头戏 , 将你复制的主题以及所写文章成功关联到 GitHub 链接 , 就可以通过 username.github.io 访问啦</p>
+<pre><code>在这里教大家一个快捷方式 , 一键部署博客到 GitHub
+</code></pre><p>​    进入 Hexo 的根目录 接着操作以下命令</p>
+<p>​    $ cd Hexo</p>
+<p>​    注意 1：现在我们需要clone我们自己的GitHub仓库了</p>
+<p>​    注意 2：username为你的github用户名</p>
+<p>​    $ git clone <a href="https://github.com/username/" target="_blank" rel="external">https://github.com/username/</a></p>
+<p>​    username.github.io.git .deploy/storm.github.io</p>
+<p>​    翻译下这条命令的意思</p>
+<p>​    将我们之前创建的GitHub 仓库克隆到本地 , 命令会新建一个目录叫做.deploy用于存放克隆的代码。</p>
+<p>​    然后会在.deploy文件夹下生成一个 你的名字.github.io 的文件夹用于存放文件</p>
+<p>​    接着在 Hexo 根目录下创建一个 .txt 文件 , 把下面的命令复制进去</p>
+<p>​    注意 ：把下面的username改成你的github用户名</p>
+<p>​    hexo generate<br>​    cp -R public/* .deploy/username.github.io<br>​    cd .deploy/username.github.io<br>​    git add .<br>​    git commit -m “update”<br>​    git push origin master</p>
+<p>​    将这个 .txt 文件的后缀改成 .sh , 它就变成了脚本文件 , 我们就将文件改成 deploy.sh 吧！意思就是部署</p>
+<p>​    从此以后需要部署本地博客到 GitHub , 直接可以双击这个文件 , 他会弹出提示 , 需要输入 GitHub 的用户名跟密码 , 是不是很高大上</p>
+<p>​    你的主题改完还没有推送到GitHub </p>
+<p>​    现在切回到Hexo的根目录下 , 我的在 E 盘 , 我就输入以下命<br>​    $ cd E:/Hexo</p>
+<p>​    如果你想改博客内容 , 随时都可以 , 进入 E:\Hexo\source_posts 目录下 , 右键你所创建的文件用Markdown编        辑器打开 , 编辑完 Ctrl + S 保存关掉窗口就行了 , 紧接着往下走就OK</p>
+<p>​    接着输入下面的生成命令</p>
+<p>​    $ hexo g</p>
+<p>​    最后一步 , 发布成功（发布之后访问会有延迟 , 别急）</p>
+<p>​    双击我们刚在Hexo 目录下编辑的 deploy.sh 脚本文件 , 然后默默的输入 GitHub 用户名和密码 , 完了之后就去访问你的个人博客网页吧！就是你的 GitHub 仓库名 <a href="https://username.github.io" target="_blank" rel="external">https://username.github.io</a> (username 是你的用户名)</p>
+<p>​    也就是说：以后你发布博客只需要两步 , Hexo 根目录下 运行 hexo g , 之后点击 depploy.sh 脚本！</p>
+<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><h3 id="博客主题"><a href="#博客主题" class="headerlink" title="博客主题"></a>博客主题</h3><p>​    到github上搜索Hexo theme 里面会有一堆主题 (里面会教你怎么用地)</p>
+<p>​    克隆主题：</p>
+<p>​    $ git clone <a href="https://github.com/????/???.git" target="_blank" rel="external">https://github.com/????/???.git</a>  themes/next</p>
+<p>​    修改 Hexo 目录下的 config.yml 配置文件和 theme 里面的 config.yml 配置文件</p>
+<p>​    启用主题：</p>
+<pre><code>Hexo根目录下：
+</code></pre><p>​    $hexo clean  //clean以前的主题缓存</p>
+<p>​    $hexo g</p>
+<p>​    $hexo s //预览</p>
+<pre><code>操作完之后浏览器输入 localhost:4000 看一下效果
+</code></pre><p>​    最后提交到 GitHub 就可以了</p>
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://wsgzao.github.io/post/Github-Hexo-搭建博客/" data-id="cj1k2pp5g0002j0qtabbov25j" class="article-share-link">Share</a>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+
       
       
     </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
-  
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
     
-<nav id="article-nav">
-  
-    <a href="/post/android/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
         
-          android
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Monstereat" />
+          <p class="site-author-name" itemprop="name">Monstereat</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Node-js"><span class="nav-number">1.</span> <span class="nav-text">安装Node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Git"><span class="nav-number">2.</span> <span class="nav-text">安装Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注册GitHub"><span class="nav-number">3.</span> <span class="nav-text">注册GitHub</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH-Key-设置"><span class="nav-number">4.</span> <span class="nav-text">SSH Key 设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#检查本机SSH-Key"><span class="nav-number">4.1.</span> <span class="nav-text">检查本机SSH Key</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加-SSH-Key-到-GitHub"><span class="nav-number">4.2.</span> <span class="nav-text">添加 SSH Key 到 GitHub</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试设置"><span class="nav-number">4.3.</span> <span class="nav-text">测试设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置用户名信息"><span class="nav-number">4.4.</span> <span class="nav-text">设置用户名信息</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-Hexo-创建博客"><span class="nav-number">5.</span> <span class="nav-text">使用 Hexo 创建博客</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建存放博客的-Github-仓库"><span class="nav-number">5.1.</span> <span class="nav-text">创建存放博客的 Github 仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">5.2.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Markdown学习"><span class="nav-number">5.3.</span> <span class="nav-text">Markdown学习</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#本地博客与github关联"><span class="nav-number"></span> <span class="nav-text">本地博客与github关联</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#补充"><span class="nav-number">1.</span> <span class="nav-text">补充</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#博客主题"><span class="nav-number">1.1.</span> <span class="nav-text">博客主题</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
         
       </div>
-    </a>
-  
-  
-</nav>
+    </main>
 
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
   
-</article>
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Monstereat</span>
+</div>
 
-</section>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
         
-          <aside id="sidebar">
-  
-    
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ListView/">ListView</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/ListView/" style="font-size: 10px;">ListView</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/post/Github-Hexo-搭建博客/"> Github + Hexo 搭建博客 </a>
-          </li>
-        
-          <li>
-            <a href="/post/android/">android</a>
-          </li>
-        
-          <li>
-            <a href="/post/myfirst/">myfirst</a>
-          </li>
-        
-          <li>
-            <a href="/post/by-陆杰华/">by 陆杰华</a>
-          </li>
-        
-          <li>
-            <a href="/post/bychenda/">bychenda</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
         
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 Monstereat<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
   </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://wsgzao.github.io/post/Github-Hexo-搭建博客/';
+          this.page.identifier = 'post/Github-Hexo-搭建博客/';
+          this.page.title = ' Github + Hexo 搭建博客 ';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>
